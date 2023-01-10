@@ -1,7 +1,7 @@
 permalink: /posts/:title
 markdown: kramdown
 
-gems:
+plugins:
   - jekyll-sitemap
 
 name: Daniel Coble
