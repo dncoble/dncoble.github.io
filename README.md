@@ -1,8 +1,12 @@
 My personal [website](nileliketheriver.net), built atop the [Left](https://github.com/holman/left) theme by Zach Holman.
 
 [dncoble.github.io](dncoble.github.io)
+
 [nileliketheriver.net](https://www.nileliketheriver.net)
 
+Remember the magic words:
+
+`bundle exec jekyll serve`
 # Left
 
 Left is a clean, whitespace-happy layout for [Jekyll](https://github.com/mojombo/jekyll).

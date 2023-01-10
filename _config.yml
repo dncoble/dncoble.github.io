@@ -4,7 +4,7 @@ markdown: kramdown
 gems:
   - jekyll-sitemap
 
-name: Zach Holman
-url: https://zachholman.com/left
-description: A fantastic blog that is fantastic.
-twitter: holman
+name: Daniel Coble
+url: https://nileliketheriver.net
+description: It's my website
+github: dncoble
