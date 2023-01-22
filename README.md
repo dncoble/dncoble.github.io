@@ -13,6 +13,7 @@ Remember the magic words:
  * ~~fix profile picture~~
  * customize posts footer
  * fill website with about me, posts, and publications
+ * fix layout: layout
 
 # Left
 
