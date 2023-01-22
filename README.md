@@ -11,9 +11,11 @@ Remember the magic words:
 
  * ~~Fix GitHub link~~
  * ~~fix profile picture~~
- * customize posts footer
+ * ~~customize posts footer~~
  * fill website with about me, posts, and publications
- * fix layout: layout
+ * ~~fix layout: layout~~
+ * see if using jekyll 3.9.2 doesn't break the world in half
+ * make a 'right' sections
 
 # Left
 
