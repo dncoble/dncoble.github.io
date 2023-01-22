@@ -1,6 +1,6 @@
 <section class="sidebar">
   <a href="/" aria-label="Avatar">
-    <img src="{{ site.github.owner_gravatar_url }}?s=150" height="100" width="100" class="avatar" />
+    <img src="{{ site.github_owner_gravatar_url }}?s=150" height="100" width="100" class="avatar" />
   </a>
 
   <section class="name">
