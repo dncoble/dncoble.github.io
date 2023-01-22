@@ -1,11 +1,11 @@
 permalink: /posts/:title
 markdown: kramdown
 
-gems:
+plugins_dir:
   - jekyll-sitemap
 
 name: Daniel Coble
-url: https://nileliketheriver.net
-description: It's my website
-twitter: nilelietheriver
+url: https://dncoble.github.io
+description: It's my website.
+twitter: nileliketheriver
 github: dncoble

@@ -1,7 +1,7 @@
 permalink: /posts/:title
 markdown: kramdown
 
-plugins:
+plugins_dir:
   - jekyll-sitemap
 
 name: Daniel Coble
@@ -9,3 +9,4 @@ url: https://dncoble.github.io
 description: It's my website.
 twitter: nileliketheriver
 github: dncoble
+linkedin: https://www.linkedin.com/in/daniel-coble-5a2352241/
