@@ -16,6 +16,7 @@ Remember the magic words:
  * ~~fix layout: layout~~
  * see if using jekyll 3.9.2 doesn't break the world in half
  * make a 'right' sections
+ * customize icons
 
 # Left
 
