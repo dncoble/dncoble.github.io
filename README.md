@@ -7,6 +7,13 @@ My personal [website](nileliketheriver.net), built atop the [Left](https://githu
 Remember the magic words:
 
 `bundle exec jekyll serve`
+# To do
+
+ * Fix GitHub link
+ * fix profile picture
+ * customize posts footer
+ * fill website with about me, posts, and publications
+
 # Left
 
 Left is a clean, whitespace-happy layout for [Jekyll](https://github.com/mojombo/jekyll).
