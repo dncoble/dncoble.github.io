@@ -15,9 +15,9 @@ a {
 
 .sidebar {
   position: fixed;
-  left: 100px;
+  left: 15px;
   top: 15px;
-  width: 300px;
+  width: 80px;
   font-family: Helvetica, sans-serif;
   a {
     text-decoration: none;
@@ -84,10 +84,10 @@ a {
 }
 
 .content {
-  margin-left: 300px;
-  margin-right: 300px;
+  max-width: 650px;
+  margin-left: 110px;
+  margin-right: 20px;
   margin-bottom: 50px;
-  left: 200;
   h1, h2, h3, h4 {
     color: #333;
     font-family: "Yanone Kaffeesatz", Helvetica, sans-serif;
