@@ -5,7 +5,7 @@ plugins_dir:
   - jekyll-sitemap
 
 name: Daniel Coble
-url: https://nileliketheriver.net
+url: dncoble.github.io
 description: It's my website.
 twitter: nileliketheriver
 github: dncoble
