@@ -19,6 +19,7 @@ Remember the magic words:
  * make a 'right' sections
  * customize icons
  * ~move to nileliketheriver.net~
+ * add first, contributing author to publications
 
 # Left
 
