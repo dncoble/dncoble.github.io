@@ -8,10 +8,11 @@ title: Publications
 *Forthcoming*
 
 ## Conference Proceedings
+[Custom HLS and HDL design of LSTM accelerator for high-rate dynamic applications](/forthcoming.html). *33rd edition of the International Conference on Field-Programmable Logic and Applications*, 2023
 
-[A non-linear online compensation technique for low energy vibration signals using artificial neural networks in structural health monitoring](/forthcoming.html). Proceedings of SPIE, 2023
+[A non-linear online compensation technique for low energy vibration signals using artificial neural networks in structural health monitoring](/forthcoming.html). *Proceedings of SPIE*, 2023
 
-[Deep learning-based friction modeling of dry interfaces for structural dampers](/forthcoming.html). *Proceedings of the 41st IMAC*, 2023
+[Deep learning-based friction modeling of dry interfaces for structural dampers](http://www.me.sc.edu/Research/Downey/publications/Conference_publications/Coble2023DeepLearningBased.pdf). *Proceedings of the 41st IMAC*, 2023
 
 [Towards online structural state-estimation with sub-millisecond latency](/forthcoming.html). *92nd Shock and Vibration Symposium*, 2023
 
