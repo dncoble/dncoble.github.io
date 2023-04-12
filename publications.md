@@ -14,7 +14,7 @@ title: Publications
 
 [Deep learning-based friction modeling of dry interfaces for structural dampers](http://www.me.sc.edu/Research/Downey/publications/Conference_publications/Coble2023DeepLearningBased.pdf). *Proceedings of the 41st IMAC*, 2023
 
-[Towards online structural state-estimation with sub-millisecond latency](/forthcoming.html). *92nd Shock and Vibration Symposium*, 2023
+[Towards online structural state-estimation with sub-millisecond latency](https://www.researchgate.net/publication/369261847_Towards_online_structural_state-estimation_with_sub-millisecond_latency#fullTextFileContent). *92nd Shock and Vibration Symposium*, 2023
 
 [Progress towards data-driven high-rate structural state estimation on edge computing devices](http://www.me.sc.edu/Research/Downey/publications/Conference_publications/Satme2022ProgressTowardsData.pdf). *In Proceedings of the ASME 2022 International Design Engineering Technical Conferences*, Aug 2022
 
