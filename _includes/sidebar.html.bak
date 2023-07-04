@@ -20,9 +20,10 @@
   <section class="sections">
     <ul>
       <li><a href="/about.html">about me</a></li>
-	  <li> <a href="/projects.html">projects</a></li>
+	  <li><a href="/projects.html">projects</a></li>
       <li><a href="/posts.html">posts</a></li>
 	  <li><a href="/publications.html">publications</a></li>
+	  <li><a href="/writeups.html"><writeups></a></li>
     </ul>
   </section>
 </section>
