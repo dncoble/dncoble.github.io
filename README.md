@@ -15,11 +15,12 @@ Remember the magic words:
  * ~~fill posts, and publications~~
  * fill about me
  * ~~fix layout: layout~~
- * see if using jekyll 3.9.2 doesn't break the world in half
+ * ~~see if using jekyll 3.9.2 doesn't break the world in half~~
  * make a 'right' sections
  * customize icons
- * ~move to nileliketheriver.net~
+ * ~~move to nileliketheriver.net~~
  * add first, contributing author to publications
+ * ~~add writeups~~
 
 # Left
 
