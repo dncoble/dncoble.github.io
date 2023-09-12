@@ -8,7 +8,7 @@ title: Publications
 *Forthcoming*
 
 ## Conference Proceedings
-[Custom HLS and HDL design of LSTM accelerator for high-rate dynamic applications](/forthcoming.html). *33rd edition of the International Conference on Field-Programmable Logic and Applications*, 2023
+[Custom HLS and HDL design of LSTM accelerator for high-rate dynamic applications](https://www.researchgate.net/publication/373685921_Accelerating_LSTM-based_High-Rate_Dynamic_System_Models#fullTextFileContent). *33rd edition of the International Conference on Field-Programmable Logic and Applications*, 2023
 
 [A non-linear online compensation technique for low energy vibration signals using artificial neural networks in structural health monitoring](http://www.me.sc.edu/Research/Downey/publications/Conference_publications/Satme2023NonLinearVibration.pdf). *Proceedings of SPIE*, 2023
 
