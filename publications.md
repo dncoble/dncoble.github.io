@@ -28,9 +28,9 @@ Deep learning-based friction modeling of dry interfaces for structural dampers. 
 
 [Online damage detection using topological data analysis](http://www.me.sc.edu/Research/Downey/publications/Posters/Coble2023OnlineDamageDetection.pdf) *USC 2023 Summer Research Symposium*, July 2023
 
-[Deep learning-based friction modeling of dry interfaces for structural dampers](http://www.me.sc.edu/Research/Downey/publications/Posters/Coble2022DeepLearningBased.pdf). *NHERI REU Symposium*, July 2022
-
 [Data-driven modeling of structures in high-rate dynamic environments](http://www.me.sc.edu/Research/Downey/publications/Posters/Coble2022DataDrivenModeling.pdf). *AFOSR DDIP Program Review*, Sept 2022
+
+[Deep learning-based friction modeling of dry interfaces for structural dampers](http://www.me.sc.edu/Research/Downey/publications/Posters/Coble2022DeepLearningBased.pdf). *NHERI REU Symposium*, July 2022
 
 [High-rate machine learning for structural state estimation](http://www.me.sc.edu/Research/Downey/publications/Posters/Coble_2022_High_rate_machine_Learning.pdf). *Discover USC*, March 2022
 
