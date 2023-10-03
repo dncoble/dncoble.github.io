@@ -5,7 +5,7 @@ title: Publications
 ---
 ## Journal Publications
 
-*Forthcoming*
+[A Note on Enhanced Dissipation and Taylor Dispersion of Time-dependent Shear Flows](https://arxiv.org/pdf/2309.15738.pdf). *Communications in Mathematical Sciences* [Submitted, not accepted]
 
 ## Conference Proceedings
 [Custom HLS and HDL design of LSTM accelerator for high-rate dynamic applications](https://www.researchgate.net/publication/373685921_Accelerating_LSTM-based_High-Rate_Dynamic_System_Models#fullTextFileContent). *33rd edition of the International Conference on Field-Programmable Logic and Applications*, 2023
