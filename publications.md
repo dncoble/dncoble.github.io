@@ -5,20 +5,20 @@ title: Publications
 ---
 ## Journal Publications
 
-[A Note on Enhanced Dissipation and Taylor Dispersion of Time-dependent Shear Flows](https://arxiv.org/pdf/2309.15738.pdf). *Communications in Mathematical Sciences* [Submitted, not accepted]
+[submitted] Daniel Coble and Siming He. [A note on enhanced dissipation and Taylor dispersion of time-dependent shear flows.](https://arxiv.org/pdf/2309.15738.pdf). *Communications in Mathematical Sciences*, 2023.
 
 ## Conference Proceedings
-[Custom HLS and HDL design of LSTM accelerator for high-rate dynamic applications](https://www.researchgate.net/publication/373685921_Accelerating_LSTM-based_High-Rate_Dynamic_System_Models#fullTextFileContent). *33rd edition of the International Conference on Field-Programmable Logic and Applications*, 2023
+Ehsan Kabir, Daniel Coble, Joud N. Satme, Austin R.J. Downey, Jason D. Bakos, David Andrews, and Miaoqing Huang. [Accelerating high-rate dynamic systems with LSTM networks](https://www.researchgate.net/publication/373685921_Accelerating_LSTM-based_High-Rate_Dynamic_System_Models#fullTextFileContent). *FPL*, 2023
 
-[A non-linear online compensation technique for low energy vibration signals using artificial neural networks in structural health monitoring](http://www.me.sc.edu/Research/Downey/publications/Conference_publications/Satme2023NonLinearVibration.pdf). *Proceedings of SPIE*, 2023
+Joud N. Satme, Daniel Coble, Hung-Tien Huang, Austin R. J. Downey, and Jason D. Bakos. [A non-linear online compensation technique for low energy vibration signals using artificial neural networks in structural health monitoring](https://cse.sc.edu/~adowney2/publications/Conference_publications/Satme2023NonLinearVibration.pdf). In Zhongqing Su, Maria Pina Limongelli, and Branko Glisic, editors, *Sensors and Smart Structures Technologies for Civil, Mechanical, and Aerospace Systems 2023*. *SPIE*, apr 2023
 
-[Deep learning-based friction modeling of dry interfaces for structural dampers](http://www.me.sc.edu/Research/Downey/publications/Conference_publications/Coble2023DeepLearningBased.pdf). *Proceedings of the 41st IMAC*, 2023
+Daniel Coble, Liang Cao, Austin R. J. Downey, and James Ricles. [Deep learning-based friction modeling of dry interfaces for structural dampers](https://cse.sc.edu/~adowney2/publications/Conference_publications/Coble2023DeepLearningBased.pdf). *In IMAC 41*, feb 2023
 
-[Towards online structural state-estimation with sub-millisecond latency](https://www.researchgate.net/publication/369261847_Towards_online_structural_state-estimation_with_sub-millisecond_latency#fullTextFileContent). *92nd Shock and Vibration Symposium*, 2023
+Daniel Coble, Joud Satme, Ehsan Kabir, Austin R.J. Downey, Jason D. Bakos, David Andrews, Miaoqing Huang, Adrine Moura, and Jacob Dodson. [Towards online structural state-estimation with sub-millisecond latency](https://cse.sc.edu/~adowney2/publications/Conference_publications/Coble2022TowardsOnlineStructural.pdf). *92nd Shock and Vibratino Symposium*, sept 2022.
 
-[Progress towards data-driven high-rate structural state estimation on edge computing devices](http://www.me.sc.edu/Research/Downey/publications/Conference_publications/Satme2022ProgressTowardsData.pdf). *In Proceedings of the ASME 2022 International Design Engineering Technical Conferences*, Aug 2022
+Joud Satme, Daniel Coble, Braden Priddy, Austin R. J. Downey, Jason D. Bakos, and Gurcan Comert. [Progress towards data-driven high-rate structural state estimation on edge computing devices](https://cse.sc.edu/~adowney2/publications/Conference_publications/Satme2022ProgressTowardsData.pdf). *In Volume 10: 34th Conference on Mechanical Vibration and Sound (VIB)*, aug 2022
 
-[Deep learning-based friction modeling of dry interfaces for structural dampers](https://www.designsafe-ci.org/data/browser/public/designsafe.storage.published/PRJ-3609). *NHERI REU Symposium*, Aug 2022
+Daniel Coble, Liang Cao, Austin Downey, and James Ricles. [Research experiences for undergraduates (REU), NHERI 2022: Deep learning-based friction modeling of dry interfaces for structural dampers](https://www.designsafe-ci.org/data/browser/public/designsafe.storage.published/PRJ-3609). *Designsafe-CI*, 2022
 
 ## Conference Presentations
 
@@ -26,20 +26,20 @@ Deep learning-based friction modeling of dry interfaces for structural dampers. 
 
 ## Posters
 
-[Online damage detection using topological data analysis](http://www.me.sc.edu/Research/Downey/publications/Posters/Coble2023OnlineDamageDetection.pdf) *USC 2023 Summer Research Symposium*, July 2023
+Daniel Coble and Austin R.J. Downey. [Online damage detection using topological data analysis](https://cse.sc.edu/~adowney2/publications/Posters/Coble2023OnlineDamageDetection.pdf) *USC 2023 Summer Research Symposium*, July 2023
 
-[Data-driven modeling of structures in high-rate dynamic environments](http://www.me.sc.edu/Research/Downey/publications/Posters/Coble2022DataDrivenModeling.pdf). *AFOSR DDIP Program Review*, Sept 2022
+Daniel Coble and Austin R.J. Downey. [Data-driven modeling of structures in high-rate dynamic environments](https://cse.sc.edu/~adowney2/publications/Posters/Coble2022DataDrivenModeling.pdf). *AFOSR DDIP Program Review*, Sept 2022
 
-[Deep learning-based friction modeling of dry interfaces for structural dampers](http://www.me.sc.edu/Research/Downey/publications/Posters/Coble2022DeepLearningBased.pdf). *NHERI REU Symposium*, July 2022
+Daniel Coble, Liang Cao, Austin R.J. Downey, and James Ricles. [Deep learning-based friction modeling of dry interfaces for structural dampers](https://cse.sc.edu/~adowney2/publications/Posters/Coble2022DeepLearningBased.pdf). *NHERI REU Symposium*, July 2022
 
-[High-rate machine learning for structural state estimation](http://www.me.sc.edu/Research/Downey/publications/Posters/Coble_2022_High_rate_machine_Learning.pdf). *Discover USC*, March 2022
+Daniel Coble and Austin Downey. [High-rate machine learning for structural state estimation](https://cse.sc.edu/~adowney2/publications/Posters/Coble_2022_High_rate_machine_Learning.pdf). *Discover USC*, March 2022
 
 ## Public Repositories
 
-[Dataset Friction Damper with Backlash](https://github.com/ARTS-Laboratory/Dataset-Friction-Damper-with-Backlash), *GitHub* 2022
+Daniel Coble, Liang Cao, James Ricles and Austin Downey. [Dataset Friction Damper with Backlash](https://github.com/ARTS-Laboratory/Dataset-Friction-Damper-with-Backlash), *GitHub* 2022
 
-[LabVIEW LSTM Library](https://github.com/ARTS-Laboratory/LabVIEW-LSTM), *GitHub* 2022
+Daniel Coble and Austin Downey. [LabVIEW LSTM Library](https://github.com/ARTS-Laboratory/LabVIEW-LSTM), *GitHub* 2022
 
-[Progress towards data driven high rate structural state estimation on edge computing devices](https://github.com/ARTS-Laboratory/Paper-Progress-towards-data-driven-high-rate-structural-state-estimation-on-edge-computing-devices), *GitHub* 2022
+Joud Satme, Daniel Coble, and Austin R.J. Downey. [Progress towards data driven high rate structural state estimation on edge computing devices](https://github.com/ARTS-Laboratory/Paper-Progress-towards-data-driven-high-rate-structural-state-estimation-on-edge-computing-devices), *GitHub* 2022
 
-[Dynamic signal reproduction](https://github.com/ARTS-Laboratory/Dynamic-signal-reproduction), *GitHub* 2022
+Daniel Coble and Austin Downey. [Dynamic signal reproduction](https://github.com/ARTS-Laboratory/Dynamic-signal-reproduction), *GitHub* 2022
