@@ -209,9 +209,13 @@ and
 
 $$ p(x) = O(x^m) \text{ as } x \to \infty.$$
 
-__Lemma__. If $p(x)$ is a polynomial of order $l$ and $q(x)$ is a polynomial of order $m$
+__Lemma__. If $p(x) = \sum_{i=l}^m c_ix^i$ is a polynomial and $q(x) = \sum_{i=n}^p c_ix^i,$, then
 
-If $q(0) \neq 0$, then 
+$$ \frac{p(x)}{q(x)} = O(x^{l-n}) \text{ as } x \to 0 $$
+
+and 
+
+$$ \frac{p(x)}{q(x)} = O(x^{m-p}) \text{ as } x \to \infty.$$
 
 ## Some other definitions and interpretations
 
