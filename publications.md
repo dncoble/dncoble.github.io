@@ -5,7 +5,11 @@ title: Publications
 ---
 ## Journal Publications
 
-[submitted] Daniel Coble and Siming He. [A note on enhanced dissipation and Taylor dispersion of time-dependent shear flows.](https://arxiv.org/pdf/2309.15738.pdf). *Communications in Mathematical Sciences*, 2023.
+Yang Kang Chua, Daniel Coble, Arman Razmarashooli, Steve Paul, Daniel Salazar Martinez, Chao Hu, Austin R. J. Downey, and Simon Laflamme [Probabilistic machine learning pipeline using topological descriptors for real-time state estimation of high-rate dynamic systems](https://cse.sc.edu/~adowney2/publications/Journal_publications/Chua2025ProbabilisticMachineLearning/Chua2025ProbabilisticMachineLearning.pdf), 2025.
+
+Daniel Coble, Liang Cao, Austin R.J. Downey, and James Ricles. [Physics-informed machine learning for dry friction and backlash modeling in structural control systems](https://cse.sc.edu/~adowney2/publications/Journal_publications/Coble2024PhysicsInformedMachine/Coble2024PhysicsInformedMachine.pdf), 2024.
+
+Daniel Coble and Siming He. [A note on enhanced dissipation and Taylor dispersion of time-dependent shear flows](https://par.nsf.gov/servlets/purl/10529133). *Communications in Mathematical Sciences*, 2023.
 
 ## Conference Proceedings
 Ehsan Kabir, Daniel Coble, Joud N. Satme, Austin R.J. Downey, Jason D. Bakos, David Andrews, and Miaoqing Huang. [Accelerating high-rate dynamic systems with LSTM networks](https://www.researchgate.net/publication/373685921_Accelerating_LSTM-based_High-Rate_Dynamic_System_Models#fullTextFileContent). *FPL*, 2023

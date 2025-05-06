@@ -21,7 +21,7 @@ Remember the magic words:
  * ~~move to nileliketheriver.net~~
  * ~~add first, contributing author to publications~~
  * ~~add writeups~~
- * make a python pre-compiler for ease of use.
+ * make python code to autogenerate some things.
  * auto-generating CV
 
 # Left
