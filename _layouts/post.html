@@ -21,35 +21,76 @@ layout: layout
   };
 </script>
 
-<section class="content">
-  <h1>
-    <a href="{{ page.url }}">{{ page.title }}</a>
-  </h1>
 
-  <section class="byline">
-    {{ page.date | date: "%B %e, %Y" }}
-  </section>
+<!-- Extract Graffiti -->
+{% assign graffiti_counter = 0 %}
+{% assign parts = content | split: '^[' %}
+{% assign content1 = '' %}
+{% assign graffiti = '' %}
 
-  {{ content }}
+{% for part in parts %}
+  {% if forloop.first %}
+    {% assign content1 = part %}
+  {% else %}
+    {% assign closing_index = -1 %}
+    {% assign string_length = part | size %}
+    {% for i in (0..string_length) %}
+      {% assign char = part | slice: i, 1 %}
+      {% if char == ']' and closing_index == -1 %}
+        {% assign closing_index = i %}
+      {% endif %}
+    {% endfor %}
+    {% assign rest = '' %}
+    {% assign graffito = '' %}
+    {% if closing_index != -1 %}
+      {% assign graffito = part | slice: 0, closing_index | strip %}
+      {% assign closing_index = closing_index | plus: 1 %}
+      {% assign part_length = part | size | minus: closing_index %}
+      {% assign rest = part | slice: closing_index, part_length %}
+    {% else %}
+      {% assign graffito = '' %}
+      {% assign rest = rest %}
+    {% endif %}
+    {% assign graffiti_counter = graffiti_counter | plus: 1 %}
+    {% assign graffiti_id = "graffito-" | append: graffiti_counter %}
+    {% assign marker = '<span class="graffiti-marker"
+      graf-id="graffito-' | append: graffiti_counter | append: '"></span>' %}
+    {% assign content1 = content1 | append: marker | append: rest %}
+    {% assign graffiti = graffiti | append: '<div class="graffiti-note" graf-id="' | append: graffiti_id | append: '" class="graffiti-block">' |
+      append: graffito | append: '</div>' %}
+  {% endif %}
+{% endfor %}
+{% assign content = content1 %}
 
-  <!-- TODO: bio here -->
-<!--   <section class="meta">
-    <h3>Discussion, links, and tweets</h3>
-    <section class="copy">
-      <a href="https://twitter.com/{{ site.twitter }}" target="_blank">
-        <img src="{{ site.github_owner_gravatar_url }}?s=142" height="50" width="50" />
-      </a>
-
-      <p>
-			
-      </p>
-
+<main class="content-wrapper">
+  <section class="content">
+    <h1>
+      <a href="{{ page.url }}">{{ page.title }}</a>
+    </h1>
+  
+    <section class="byline">
+      {{ page.date | date: "%B %e, %Y" }}
     </section>
-  </section> -->
-</section>
-
-<!--
-<section class="right">
-  {{ right-notes }}
-</section>
--->
+  
+    {{ content }}
+  
+    <!-- TODO: bio here -->
+    <!--   <section class="meta">
+      <h3>Discussion, links, and tweets</h3>
+      <section class="copy">
+        <a href="https://twitter.com/{{ site.twitter }}" target="_blank">
+          <img src="{{ site.github_owner_gravatar_url }}?s=142" height="50" width="50" />
+        </a>
+  
+        <p>
+  			
+        </p>
+  
+      </section>
+    </section> -->
+  </section>
+  
+  <section class="right">
+    {{ graffiti }}
+  </section>
+</main>

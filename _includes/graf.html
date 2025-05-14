@@ -1,0 +1,24 @@
+<!-- This is unused HTML from when I was creating graffiti -->
+
+{% assign graf_counter = graf_counter | plus: 1 %}
+{% assign id = "graf-" | append: graf_counter %}
+
+<span class="graffiti-marker" data-graffiti-id="{{ id }}"></span>
+
+{% capture _note %}
+<div class="graffiti-note" data-graffiti-id="{{ id }}">
+    Graffito: {{ include.text | markdownify }}
+</div>
+{% endcapture %}
+
+<!-- {{ _note }} -->
+
+<!-- {% capture all_notes %}
+    {{ all_notes }}
+    {{ _note }}
+{% endcapture %}
+{% assign all_notes = all_notes %} -->
+
+{% assign all_notes = all_notes | append: new_note %}
+
+{{ all_notes }}

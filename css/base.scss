@@ -13,6 +13,12 @@ a {
   color: #227ce8;
 }
 
+.content-wrapper {
+  display: flex;
+  // max-width: 850px;
+  gap: 50px;
+}
+
 .sidebar {
   position: fixed;
   left: 15px;
@@ -84,6 +90,7 @@ a {
 }
 
 .content {
+  flex: 0 1 750px;
   max-width: 750px;
   margin-left: 200px;
   margin-right: 20px;
@@ -236,4 +243,17 @@ a {
       color: #fff;
     }
   }
+}
+
+.right {
+  @extend .content;
+  margin-left: 0px;
+  flex: 0 1 100px;
+  max-width: 100px;
+}
+
+.grafitti-note {
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
 }
