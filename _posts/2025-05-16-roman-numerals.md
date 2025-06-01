@@ -3,7 +3,7 @@ layout: post
 title: Roman Numerals in One Line of Python
 category: blog
 draft: false
-tags: test
+tags: python, math, syntax
 ---
 When I was first learning programming in Python in ninth grade, I would often finish my assignments early. To occupy ourselves til the end of class, my friend and I would invent little programmming challenges. Often, it would be to write a program to do some task in as few lines as possible. It's sort of like [code golf](https://codegolf.stackexchange.com/), but rather than trying to program in the fewest number of characters, you try to write a program in the fewest lines possible. For example, here's a primality test in one line:
 

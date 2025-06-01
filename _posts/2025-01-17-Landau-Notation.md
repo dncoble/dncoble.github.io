@@ -2,7 +2,7 @@
 layout: post
 title: "Landau Notation: A user's guide"
 category: blog
-draft: true
+draft: false
 tags: math, explainer
 ---
 
@@ -79,7 +79,7 @@ $$ |1 + x^2| = x_0 + x^2 \leq x + x^2 \leq x^2 + x^2 = 2x^2 = 2|x^2|. $$
 
 But $1 + x^2 \neq O(x^2)$ as $x\to 0$. To see this, assume for contraction that two such $x_0$ and $C$ exist. Then we take $x=\frac{x_0}{\sqrt{1+Cx_0^2}}$, which, $C$ being greater or equal to $0$, is less than $x_0$. The contradiction forms as
 
-$$ 1 + x^2 = 1 + \left(\frac{x_0}{\sqrt{1+Cx_0^2}}\right)^2 = 1 + \frac{x_0^2}{1+Cx_0^2} = \frac{1 + Cx_0^2}{1+Cx_0^2} + \frac{x_0^2}{1+Cx_0^2} = \frac{1 + (C+1)x_0^2}{1+Cx_0^2} > \frac{(C+1)x_0^2}{1+Cx_0^2} > C\frac{x_0^2}{1+Cx_0^2} = Cx^2 $$
+$$ 1 + x^2 = 1 + \left(\frac{x_0}{\sqrt{1+Cx_0^2}}\right)^2 = 1 + \frac{x_0^2}{1+Cx_0^2} = \frac{1 + Cx_0^2}{1+Cx_0^2} + \frac{x_0^2}{1+Cx_0^2} = \frac{1 + (C+1)x_0^2}{1+Cx_0^2} > \frac{Cx_0^2}{1+Cx_0^2} = Cx^2 $$
 
 Often, the qualifier is dropped when the when the interpretation is 'implied'. This is no doubt the cause of some of the confusion regarding the notation. In general, when analyzing algorithm growth, "as $x\to\infty$" is meant, whereas when expanding Taylor series, "as $x\to 0$" is meant. If you're still confused which one you are dealing with in any situtation, ask yourself which is true: $x=O(x^2)$ or $x^2 = O(x)$. The first, $x=O(x^2)$, is true as $x\to\infty$, while the second, $x^2 = O(x)$, is true as $x\to 0$. 
 
@@ -117,7 +117,7 @@ The interpretation here is that big O acts as "less than or equal to" and little
 
 __Definition #6__. \[Notation\] If $f(x) - g(x) = O(h(x))$, then we can also write $f(x) = g(x) + O(h(x))$. Likewise, if $f(x) - g(x) = o(h(x))$ as $x\to a$, then we can also write $f(x) = g(x) + o(h(x))$ as $x\to a$.
 
-We now have something that looks like eqn. \eqref{first eq}, and can answer why it isn't in fact, an equality. From the very beginning, the equality was only notational; In effect, defn. #1 doesn't define $O(\cdot)$, but "$=O(\cdot)$". Read allowed, we say f(x) *is* O(g(x)), not f(x) *equals* O(g(x)). [1] describes the sense of this "is" as in the sentence "A bird is an animal." That does not mean "bird = animal", but that "bird" is in the class of "animal." (See also that textbook for a longer discussion about the history of the notation, and why we're stuck with this abuse of notation.) Likewise, $f(x)= O(g(x))$ is in the class of functions which behave asymtotically, like (or less than) $g(x)$. 
+We now have something that looks like eqn. \eqref{first eq}, and can answer why it isn't in fact, an equality. From the very beginning, the equality was only notational; In effect, defn. #1 doesn't define $O(\cdot)$, but "$=O(\cdot)$". Read allowed, we say f(x) *is* O(g(x)), not f(x) *equals* O(g(x)). Graham, Knuth, and Patashnik describes the sense of this "is" as in the sentence "A bird is an animal." That does not mean "bird = animal", but that "bird" is in the class of "animal." (See also that textbook for a longer discussion about the history of the notation, and why we're stuck with this abuse of notation.) Likewise, $f(x)= O(g(x))$ is in the class of functions which behave asymtotically, like (or less than) $g(x)$. 
 
 ## Manipulating Landau notation
 
@@ -191,7 +191,7 @@ And by eqn. \eqref{big O rule 3},
 
 $$ \frac{4x^3 + 3x}{x^2 + 1} = O\left(x\right) \text{ as } x\to\infty $$
 
-Of course, it's also true that $f(x) = x^2$, but when analyzing function asymptotics, we want the strongest possible bound, at least if we can get it. After only a few examples, you'll notice some shortcuts. I've listed some important ones in the lemmata below:
+Of course, it's also true that $f(x) = O(x^2)$, but when analyzing function asymptotics, we want the strongest possible bound, at least if we can get it. After working through a few examples, you'll notice some shortcuts. I've listed some important ones in the lemmata below:
 
 __Lemma__. If $f(x) = O(g(x))$ and $h(x) = O(k(x))$, and also $g(x) = O(k(x))$, then
 
@@ -219,13 +219,16 @@ $$ \frac{p(x)}{q(x)} = O(x^{m-p}) \text{ as } x \to \infty.$$
 
 ## Extending the algebra
 
-As I've tried to emphasize, Landau notation is a way to work with limiting behavior algebraicly. But we still have not unlocked the full power of Landau. For instance, the rules from above would permit us to perform the following manipulation:
+As I've tried to emphasize, Landau notation is a way to work with limiting behavior algebraicly. But we still have not unlocked the full power of Landau. For instance, if the following holds,
 
 \begin{equation}\label{manip step 1}
-    f(n) = \frac{1}{4}n^3 + O(n) \text{ as } n \to \infty
+    f(n) = \frac{1}{4}n^3 + O(n) \text{ as } n \to \infty,
 \end{equation}
+
+the rules from above would let us deduce that
+
 \begin{equation}\label{manip step 2}
-    \frac{f(n)}{n} = \frac{1}{4}n^2 + O(1) \text{ as } n \to \infty
+    \frac{f(n)}{n} = \frac{1}{4}n^2 + O(1) \text{ as } n \to \infty.
 \end{equation}
 It would nice to include the middle step between eqns. \eqref{manip step 1} and \eqref{manip step 2}.
 
@@ -235,7 +238,7 @@ It would nice to include the middle step between eqns. \eqref{manip step 1} and 
 
 But such an expression is not allowable from the rules established in the previous sections. The problem is that we have never defined what a term like $\frac{1}{n}O(n)$ means. One solution would be to patch big O with another notational rule:
 
-__Definition #xx__. [Speculative notation]. If
+__Definition #7__. [Speculative notation]. If
 
 \begin{equation}
     h(x)^{-1}\left(f(x) - g(x)\right) = O(p(x))
@@ -258,15 +261,22 @@ then we may write
     f(x) = g(x) + h(x)o(p(x)) \text{ as } x\to a.
 \end{equation}
 
-Adding this notation could work, if we only care about fixing the issue eqn. \eqref{middle step}. But it wouldn't resolve all issues that could exist; perhaps the $O$ would nested deep within a complicated expression. Unless we want to come up with To allow full movement of $O$ algebraicly, we simply need a stronger scheme. I'll quote here from Concrete Mathematics, which explains the concept better than I could.
+Adding this notation could work, if we only care about fixing the issue eqn. \eqref{middle step}. But it wouldn't resolve all issues that could exist; perhaps the $O$ could be nested deep within a complicated expression, each type of expression requiring its own notational definition. To allow full movement of $O$ algebraicly, we need a stronger scheme, which will come from the class-membership idea. I'll quote here from Concrete Mathematics, which explains the concept better than I could.
 
-From a strictly formal point of view, the notation $O(g(n))$ does not stand for a single function $f(n)$, but for the *set* of all functions $f(n)$ such that $\|f(n)\| \leq C \|g(n)\|$ for some constant $C$. An ordinary formula $g(n)$ that doesn't involve $O$-notation stands for the set containing a single function $f(n)=g(n)$. If $S$ and $T$ are sets of functions of $n$, the notation $S+T$ stands for the set of all functions of the form $f(n) + g(n)$, where $f(n)\in S$ and $g(n)\in T$; other notations like $S-T$, $ST$, $S/T$, $\sqrt{S}$, $e^S$, and $\ln S$ are defined similarly. Then an "equation" between such sets of functions is, strictly speaking, a *set inclusion*; the '=' sign really means '$\subset$'. These formal definitions put all of our $O$ manipulations on firm logical ground.
+"From a strictly formal point of view, the notation $O(g(n))$ does not stand for a single function $f(n)$, but for the *set* of all functions $f(n)$ such that $\|f(n)\| \leq C \|g(n)\|$ for some constant $C$. An ordinary formula $g(n)$ that doesn't involve $O$-notation stands for the set containing a single function $f(n)=g(n)$. If $S$ and $T$ are sets of functions of $n$, the notation $S+T$ stands for the set of all functions of the form $f(n) + g(n)$, where $f(n)\in S$ and $g(n)\in T$; other notations like $S-T$, $ST$, $S/T$, $\sqrt{S}$, $e^S$, and $\ln S$ are defined similarly. Then an "equation" between such sets of functions is, strictly speaking, a *set inclusion*; the '=' sign really means '$\subset$'. These formal definitions put all of our $O$ manipulations on firm logical ground."
 
 -- Concrete Mathematics, pg. 446.
 
-The next step is to make $O$ look *more* like a function and make the statement look *more* like an equality. 
+__Example__. If $f(x)=O(g(x))$, $f(x) + 1 = 1 + O(g(x))$. That is,
 
+\begin{equation}
+\\{f(x) + 1\\} \subset \\{h(x) +1| \text{ there exists } C \text{ such that } |h(x)| \leq C|g(x)| \text{ for all } x \\}.
+\end{equation}
+Above I'm using set notation. The left side is the set containing the function of $x$ defined as $f(x) + 1$. The right side is the set of all functions $h$ with $h(x) = O(g(x))$, in the sense of defn. #1. The same principle can be used to define any right hand side, and in fact opens up the left hand side into containing $O$ terms as well. 
 
+__Example__. $o(f(x)) = O(f(x))$. This continues the metaphor of $o$ being $<$ and $O$ being $\leq$; being less than implies being less than or equal to.
+
+<!-- The next step is to make $O$ look *more* like a function and make the statement look *more* like an equality. 
 
 By this interpretation, $O$ . There are, as I see it, two views 
 
@@ -289,15 +299,15 @@ In conclusion, there are three broadening interpretation/definitions of big O
 1. The 'symbolic equals' definition developed in the previous section, where $=O(g(x))$ is defined. 
 2. 
 3. The 'set inclusion' definition, where $O$ represents 
-For the first interpretation
+For the first interpretation -->
 
-## Some other definitions and interpretations
+## Some other definitions
 
-The goal of this section is to provide some alternative and equivalent definitions of Landau notation. These definitions are all equivalent, so, following mathematical convention, there's no reason to chose which one is "the most true."
+<!-- The goal of this section is to provide some alternative and equivalent definitions of Landau notation. These definitions are all equivalent, so, following mathematical convention, there's no reason to chose which one is "the most true." -->
 
 First, I promised to explain how the definitions for little o as $x\to\infty$ and $x\to 0$ are both limits and cases of defn. #6. For this, we will need to recall the definition of the limit of a function approaching a real number, and the definition of the limit of a function approaching a infinity.
 
-__Definition #7__. [Real limit] Let $f(x)$ be a function on the real numbers, and $a$ and $L$ be real numbers. If for every $\epsilon > 0$, there exists a $\delta > 0$ so that
+__Definition #8__. [Real limit] Let $f(x)$ be a function on the real numbers, and $a$ and $L$ be real numbers. If for every $\epsilon > 0$, there exists a $\delta > 0$ so that
 
 $$ |x - a| < \delta \implies |f(x) - L| < \epsilon, $$
 
@@ -307,7 +317,7 @@ $$ \lim_{x\to a} f(x) = L $$
 
 read, "the limit of $f$ as $x$ approaches $a$ equals $L$."
 
-__Definition #8__. [Infinite limit] Let $f(x)$ be a function on the real numbers, and $L$ be a real number. If for every $\epsilon > 0$, there exists a $x_0 > 0$ so that
+__Definition #9__. [Infinite limit] Let $f(x)$ be a function on the real numbers, and $L$ be a real number. If for every $\epsilon > 0$, there exists a $x_0 > 0$ so that
 
 $$ x > x_0 \implies |f(x) - L| < \epsilon $$
 
@@ -343,7 +353,7 @@ With this interpretation, we retrieve the true 'equality' of the equals sign, at
 
  As I showed in the first section, big O isn't really a limit, although people like to think of it that way. A common re-definition of big O uses the limit superior, $\limsup$. To understand this definition, we'll first have to define the limit superior, which is nothing more than the combination of a limit and supremum operator.
 
-__Definition__. [$\limsup$]. The limit superior, $\limsup_{x\to a}$, is defined for $a\in \mathbb{R}$ or $a= \pm \infty$. For $a\in \mathbb{R}$, the limit superior is defined as
+__Definition #10__. [$\limsup$]. The limit superior, $\limsup_{x\to a}$, is defined for $a\in \mathbb{R}$ or $a= \pm \infty$. For $a\in \mathbb{R}$, the limit superior is defined as
 
 \begin{equation}
     \limsup_{x\to a} = \lim_{\delta\to 0^+} \sup_{-\delta \leq x-a \leq \delta} f(x).
@@ -369,7 +379,7 @@ since for any $x_0$, there is always some $x>x_0$ so that $\sin(x) = 1$. But als
 
 since even though $\frac{x}{1+x}$ never actually achieves 1, that is its asymptotic value. We can now (re)define big O.
 
-__Definition #xx__. [Big O]. For the function $f(x)$ comparison function $g(x)$, and $a$ which is either real or $\pm \infty$, we say that $f(x)=O(g(x))$ as $x \to a$, if
+__Definition #11__. [Big O]. For the function $f(x)$ comparison function $g(x)$, and $a$ which is either real or $\pm \infty$, we say that $f(x)=O(g(x))$ as $x \to a$, if
 
 \begin{equation}
     \limsup_{x\to a}\left|\frac{f(x)}{g(x)}\right| \text{ exists.}
@@ -380,9 +390,9 @@ This can also be written as
     \limsup_{x\to a} \left|\frac{f(x)}{g(x)}\right| < \infty.
 \end{equation}
 
-Now we need prove the equivalence of def. #xx and def. #1. I will warn you, though, that this proof is technical and uses a couple of results from real analysis. I'll include the proof for $a=0$. The $a=\infty$ case is too similar to bother also including here.
+Now we need prove the equivalence of defn. #11 and defn. #3. I will warn you, though, that this proof is technical and uses a couple of results from real analysis. I'll include the proof for $a=0$. The $a=\infty$ case is too similar to bother also including here.
 
-__Proof__. (def. #1 $\implies$ def.xx) Say $f(x)=O(g(x))$ as $x\to 0$ in the def. #1 sense. Then there exists an $x_0$ and $C$ such that
+__Proof__. (defn. #3 $\implies$ def.11) Say $f(x)=O(g(x))$ as $x\to 0$ in the defn. #3 sense. Then there exists an $x_0$ and $C$ such that
 
 \begin{equation}
     |f(x)| \leq C|g(x)| \text{ for all } |x| \leq x_0.
@@ -403,13 +413,13 @@ Since $ \|\frac{f(x)}{g(x)}\| $ is bounded from above for $\| x \| \leq \delta$,
     \sup_{|x|\leq \delta} \left|\frac{f(x)}{g(x)}\right| \text{ exists for all } 0 < \delta < x_0.
 \end{equation}
 
-Now, notice that $\sup_{\|x\|\leq \delta} \|\frac{f(x)}{g(x)}\|$, viewed as a function of $\delta$ must only be decreasing as $\delta \to 0$ (since the bounds only get smaller). By another result of analysis (the monotone convergence theorem), we get that the limit as $\delta \to 0$ exists, and recover the statement of def. xx.
+Now, notice that $\sup_{\|x\|\leq \delta} \|\frac{f(x)}{g(x)}\|$, viewed as a function of $\delta$ must only be decreasing as $\delta \to 0$ (since the bounds only get smaller). By another result of analysis (the monotone convergence theorem), we get that the limit as $\delta \to 0$ exists, and recover the statement of defn. #11.
 
 \begin{equation}
     \lim_{\delta \to 0^+}\sup_{|x|\leq \delta} \left|\frac{f(x)}{g(x)}\right| \text{ exists.}
 \end{equation}
 
-(def. #xx $\implies$ def. #1) Assume that $f(x)=O(g(x))$ in the def. xx sense, and let the limit superior be given by a number, $E$. In $\epsilon$-$\delta$ form, the definition says that for any $\epsilon > 0$ there exists a $\delta > 0$ such that
+(defn. #11 $\implies$ def. #1) Assume that $f(x)=O(g(x))$ in the defn. #11 sense, and let the limit superior be given by a number, $E$. In $\epsilon$-$\delta$ form, the definition says that for any $\epsilon > 0$ there exists a $\delta > 0$ such that
 
 \begin{equation}\label{prf_eq1}
     \delta_0 < \delta \implies \left|\sup_{-\delta_0 \leq x \leq \delta_0} \left|\frac{f(x)}{g(x)}\right| - E \right| < \epsilon.
@@ -436,11 +446,11 @@ The inequality holding at the supremum implies it holds for all $x$ in the bound
     \left|\frac{f(x)}{g(x)}\right| < 1 + E \text{ for all } -\delta < x < \delta.
 \end{equation}
 
-Taking $C = 1 + E$ and $x_0=\delta$, we recover the statement of def. #1 (up to the inconsequential difference between $\|x\| \leq \delta $ and $\|x\|< \delta$).
+Taking $C = 1 + E$ and $x_0=\delta$, we recover the statement of defn. #3 (up to the inconsequential difference between $\|x\| \leq \delta $ and $\|x\|< \delta$).
 
-The proof above looks , but the intuitive connection between def. 1 and def. xx is easier to describe. While def. #1 there exist a threshhold bound $x_0$ and scaling value $C$, where , def. xx states (equivalently), that moving towards the limiting value, one eventually reaches a point where the ratio $\|\frac{f(x)}{g(x)}\|$ has a supremum (more importantly: is bounded), for all future values. The overhead in the proof above has to do with the fact that some work has to go into constructing the supremum, even though we only care about its existance. More often, this definition is called upon for the $x\to \infty$ case. I chose to include the $x\to 0$ proof above because my goal in this blog has been to repeatedly emphasize the connection between the $x\to 0$ and $x\to \infty$ case.
+The proof above looks intimidating, but the intuitive connection between defn. #3 and defn. #11 is easier to describe. While by defn. #3, there exist a threshhold bound $x_0$ and scaling value $C$, where the inequality holds, defn. #11 states (equivalently), that moving towards the limiting value, one eventually reaches a point where the ratio $\|\frac{f(x)}{g(x)}\|$ has a supremum (more importantly: is bounded), for all future values. The overhead in the proof above has to do with the fact that some work has to go into constructing the supremum, even though we only care about its existance. More often, this definition is called upon for the $x\to \infty$ case. I chose to include the $x\to 0$ proof above because my goal in this blog has been to repeatedly emphasize the connection between the $x\to 0$ and $x\to \infty$ case.
 
-I, for one, don't like this limit supremum concept for big O. Limits are a way to encode that an expression gets 'increasingly true,' as we move towards some limiting value. For instance, the limit definition of the derivative
+I, for one, don't like this limit supremum concept for big O. Limits are a way to represent that an expression gets 'increasingly true,' as we move towards some limiting value. For instance, the limit definition of the derivative
 
 <!-- As I explained in the first section, no limiting is actually occuring in big O. Instead, we have some inequality, including some unknown quantifier $C$, and then place a bound on where this inequality holds, where the domain of the bound is also an unknown qualtifier $x_0$. -->
 
@@ -450,9 +460,9 @@ I, for one, don't like this limit supremum concept for big O. Limits are a way t
 
 expresses that $\frac{f(x+h)-f(x)}{h}$ moves closer and closer to $f'(x)$, as $h$ goes to $0$. This, fundamentally, is not what big O expresses, which states that the inequality holds *exactly*, at some point moving towards the limiting value. The 'moving towards truth' effect of this limit then in effect must be cancelled by the supremum, since in taking the supremum we consider all values within the bound, so already includes the values 'at infinity' (or zero). For all of this added machinery, the final statement is only that this value exists. It seems to me more inelegant than the first definition. Moreover, it is more restricted because it excludes the very valid notion that a function $f(x)$ may be $O(g(x))$ *everywhere*.
 
-Here's another definition of my own design. It reinterprets the relationship between $f(x)$ and $g(x)$ from multiplication into subtraction,where the difference between the two functions is accounted for by the scaled residual $r(x)$.
+Here's another definition which reinterprets the relationship between $f(x)$ and $g(x)$ from multiplication into subtraction, where the difference between the two functions is accounted for by the scaled residual $r(x)$.
 
-__Definition__. $f(x) = O(g(x))$ if and only if there is some $r(x)$, $\widetilde{C}$ so that
+__Definition #12__. $f(x) = O(g(x))$ if and only if there is some $r(x)$, $\widetilde{C}$ so that
 
 \begin{equation}\label{def eq}
     g(x) = f(x) + \widetilde{C}r(x),
@@ -476,7 +486,7 @@ By choosing $C=\widetilde C + 1$, we see that $f(x)=O(g(x))$.
 
 Following the general definition of big O, the definition above doesn't include a limiting value. Inclusion of a limiting value would only change the bounds where eqns. \eqref{def eq} and \eqref{def ineq} hold, with no change to the proof. This definition uses the scaled residual value $\widetilde C r(x)$ in eqn. \eqref{def eq}. An equivalent, unscaled definition is as follows:
 
-__Definition__. $f(x) = O(g(x))$ if and only if there is some $\widetilde C$, so that with $r(x)$ being defined from
+__Definition #13__. $f(x) = O(g(x))$ if and only if there is some $\widetilde C$, so that with $r(x)$ being defined from
 
 \begin{equation}
     g(x) = f(x) + r(x)
@@ -490,7 +500,7 @@ Now, we see that the above definitions rely on the fact that $f(x) = O(g(x))$ if
 
 The corresponding 'residual' definition for little o is even easier.
 
-__Definition__. $f(x) = o(g(x))$ as $x\to a$ if and only if for $r(x)$ defined from
+__Definition #14__. $f(x) = o(g(x))$ as $x\to a$ if and only if for $r(x)$ defined from
 
 \begin{equation}
     g(x) = f(x) + r(x)
@@ -506,8 +516,8 @@ $$ \lim_{x\to a} \frac{r(x)}{g(x)} = \lim_{x\to a} \frac{g(x) - f(x)}{g(x)} = \l
 
 $$ 1 - \lim_{x\to a} \frac{r(x)}{g(x)} = \lim_{x\to a} \frac{f(x)}{g(x)} $$
 
-So the two definitions correspond exactly. (The inclusion of the absolute value in defn. __ is no big deal.)
+So the two definitions correspond exactly. (The inclusion of the absolute value in defn. #6 is no big deal.)
 
 ## References
 
-In writing this blog I've pulled primarily from Concrete Mathematics, ch. 9, and always chose their definitions when they conflict with other sources. This textbook is the only one I know of that defines big O first then describes the limiting 'condition' of $x\to 0$ or $x\to \infty$, as I do in defns. 1-3. Other sources define both the inequality and bound in one step.
+In writing this blog I've pulled primarily from Concrete Mathematics (Graham, Knuth, and Patashnik), ch. 9, and always chose their definitions when they conflict with other sources. This textbook is the only one I know of that defines big O first then describes the limiting 'condition' of $x\to 0$ or $x\to \infty$, as I do in defns. 1-3. Other sources define both the inequality and bound in one step.
