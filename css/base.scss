@@ -56,6 +56,7 @@ a {
   .meta {
     a {
       margin-left: 0px;
+      margin-right: 6px;
       color: black;
       &:hover {
         color: #227ce8;
@@ -64,6 +65,11 @@ a {
     margin-left: 4px;
     .icon {
       margin-right: 6px;
+    }
+    .scholar-icon {
+      width: 1em;
+      height: 1em;
+      vertical-align: -0.125em;
     }
   }
   .sections {

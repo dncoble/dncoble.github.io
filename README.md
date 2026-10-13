@@ -22,7 +22,9 @@ Remember the magic words:
  * ~~add first, contributing author to publications~~
  * ~~add writeups~~
  * make python code to autogenerate some things.
- * auto-generating CV
+ * ~~add RSS feed~~
+ * summaries for blogs to be added to RSS
+ * clean tracked files
 
 # Left
 
